@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My contact</title>
+        <!-- AOS animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+    <!-- This is Link javascript -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- This is link Google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&family=Bayon&display=swap" rel="stylesheet">
+    <!-- This is Link icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <!-- This is Link Css -->
+    <link rel="stylesheet" href="style.css">
+   <!-- This is Link Boostrap   -->
+    <link rel="stylesheet" href="SRC/bootstrap.min.css.map">
+    <!-- This is Link Jquery javascript -->
+    <script src="SRC/QJ.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            /* padding: 20px; */
+        }
+        .mar{
+            position: fixed;
+            /* top: ; */
+            bottom:0 ;
+            left:0 ;
+            font-family: AKbalthom Kbach;
+            color: rgb(222, 241, 8);
+            font-size: 30px;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.69);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 0.8s ease;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .box-profile{
+            padding: 20px;
+            width: 70%;
+            height: 35%;
+            background-color: #ffffff;
+            box-shadow: 0 20px 60px rgba(247, 247, 247, 0.388);
+            margin: auto;
+            border-radius: 20px;
+
+        }
+        .box-my-pic{
+            width: 25%;
+            height: 80%;
+            background-color: aliceblue;
+            box-shadow: 0 20px 60px rgba(70, 182, 187, 0.3);
+            margin: auto;
+            border-radius: 100px;
+        }
+        .box-my-pic img{
+           width: 100%;
+            height: 100%;
+            background-color: aliceblue;
+            box-shadow: 0 20px 60px rgba(70, 182, 187, 0.3);
+            margin: auto;
+            border-radius: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box-infor{
+            padding: 20px;
+            width: 70%;
+            height: 35%;
+            background-color: white;
+            box-shadow: 0 20px 60px rgba(255, 255, 255, 0.488);
+            margin: auto;
+            border-radius: 20px;
+
+        }
+        .box-text{
+            padding: 5px;
+            width: 99%;
+            height: 100%;
+            margin: auto;
+            
+        }
+        .about-us{
+            width: 15%;
+            height: 29%;
+            background-color: rgb(0, 200, 60);
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Bayon';
+            box-shadow: 0 20px 60px rgba(19, 12, 12, 0.523);
+            border-radius: 10px;
+            animation: fadeIn 0.8s ease;
+            
+        }
+        .text{
+            width: 100%;
+            height: 83%;
+            /* background-color: aqua; */
+            font-family: 'Battambang';
+            font-size: 25px;
+            text-align: justify;
+            margin-top: 10px;
+        }
+        .social{
+            padding: 20px;
+            width: 70%;
+            height: 100%;
+            background-color: #ffffff;
+            box-shadow: 0 20px 60px rgba(235, 233, 233, 0.521);
+            margin: auto;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .social i{
+            color: red;
+            font-size: 30px;
+        }
+        .social h1{
+            color: red;
+            font-size: 40px;
+            font-family: 'Bayon';
+            margin-right: 100px;
+        }
+
+        .archive {
+            flex: 1 1 45%;
+            min-width: 200px;
+            height: 400px;
+            background-color: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(5, 17, 17, 0.3);
+            display: flex;
+            flex-direction: column;       
+            align-items: center;          
+            justify-content: center;      
+            text-align: center;           
+            padding: 20px;
+            gap: 1px;                   
+        }
+
+        .archive img {
+            width: 300px;                 
+        }
+
+        .archive h1 {
+            font-size: 50px;
+            font-family: 'Bayon';
+            color: rgb(0, 200, 60);
+            /* margin: 0; */
+        }
+
+        .archive p {
+            font-size: 30px;
+            font-family: 'Battambang';
+            /* margin: 0; */
+        }
+
+        .archive, .element {
+            flex: 1 1 45%;           
+            min-width: 200px;         
+            height: 400px;            
+            background-color: rgb(255, 255, 255);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(5, 17, 17, 0.3);
+        }
+        .element{
+             flex: 1 1 45%;
+            min-width: 200px;
+            height: 400px;
+            background-color: whitesmoke;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(5, 17, 17, 0.3);
+
+            
+            display: flex;
+            flex-direction: column;       
+            align-items: center;          
+            justify-content: center;     
+            text-align: center;          
+            padding: 20px;
+            gap: 1px;         
+        }
+        .element img{
+            width: 280px;                
+
+        }
+         .element h1 {
+            font-size: 40px;
+            font-family: 'Bayon';
+            color: rgb(0, 200, 60);
+            /* margin: 0; */
+        }
+
+        .element p {
+            font-size: 20px;
+            font-family: 'Battambang';
+            /* margin: 0; */
+        }
+
+        /* This hover */
+
+        /* Hover for About Us */
+        .about-us:hover {
+            background-color: rgb(161, 193, 169);
+            color: rgb(230, 228, 228);
+            transform: scale(1.05);
+            transition: all 0.3s ease;
+        }
+
+        /* Hover for Text */
+        .text:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+
+        /* Hover for Social Box */
+        .social:hover {
+            background-color: rgb(218, 230, 207);
+            transform: scale(1.03);
+            transition: all 0.3s ease;
+        }
+
+        /* Hover for Social Icons */
+        .social i:hover {
+            color: rgb(0, 150, 200);
+            transform: rotate(15deg) scale(1.2);
+            transition: all 0.3s ease;
+        }
+
+        /* Hover for Archive Boxes */
+        .archive:hover {
+            background-color: rgb(130, 120, 230);
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 25px 70px rgba(0, 200, 60, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        /* Hover for Archive Texts */
+        .archive h1:hover, .archive p:hover {
+            color: rgb(0, 150, 40);
+            transition: all 0.3s ease;
+        }
+
+        /* Hover for Element Boxes */
+        .element:hover {
+            background-color: rgb(170, 208, 208);
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 25px 70px rgba(0, 150, 200, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        /* Hover for Element Texts */
+        .element h1:hover, .element p:hover {
+            color: rgb(0, 120, 180);
+            transition: all 0.3s ease;
+        }
+
+
+        
+
+        /* Desktop device */
+        @media (min-width: 800px) and (max-width: 1280px) {
+            .container {
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: 25px;
+            }
+
+            .box-profile,
+            .box-infor,
+            .social {
+                width: 80%;
+            }
+
+            .archive,
+            .element {
+                flex: 1 1 45%;
+                height: 380px;
+            }
+
+            .archive img, .element img {
+                width: 250px;
+            }
+
+            .archive h1, .element h1 {
+                font-size: 40px;
+            }
+
+            .archive p, .element p {
+                font-size: 20px;
+            }
+        }
+        /* Tepblet device */
+        @media (min-width: 481px) and (max-width: 1249px) {
+            .text {
+                font-size: 20px;
+                text-align: left; 
+                padding: 15px;
+                line-height: 1.8;
+            }
+            .about-us {
+                width: 40%;
+                height: auto;
+                font-size: 28px;
+            }
+            .container {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 25px;
+            }
+
+            .box-profile,
+            .box-infor,
+            .social {
+                width: 90%;
+            }
+
+            .archive,
+            .element {
+                flex: 1 1 45%;
+                height: 350px;
+            }
+
+            .archive img, .element img {
+                width: 220px;
+            }
+
+            .archive h1, .element h1 {
+                font-size: 35px;
+            }
+
+            .archive p, .element p {
+                font-size: 18px;
+            }
+        }
+        /* mobile device */
+        @media (max-width: 480px) {
+            .text {
+                font-size: 18px;
+                text-align: left; 
+                padding: 10px;
+                line-height: 1.7;
+            }
+            .about-us {
+                width: 60%;
+                font-size: 25px;
+            }
+            .container {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+
+            .box-profile,
+            .box-infor,
+            .social {
+                width: 95%;
+            }
+
+            .archive,
+            .element {
+                width: 90%;
+                height: auto;
+                flex-direction: column;
+                text-align: center;
+                padding: 15px;
+            }
+
+            .archive img, .element img {
+                width: 180px;
+            }
+
+            .archive h1, .element h1 {
+                font-size: 30px;
+            }
+
+            .archive p, .element p {
+                font-size: 16px;
+            }
+
+            .social {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .social h1 {
+                margin: 10px 0;
+                font-size: 30px;
+            }
+
+            .social i {
+                font-size: 25px;
+                margin: 5px;
+            }
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <marquee class="mar" onmouseover="this.stop()" onmouseout="this.start()" scrollamount = "20" direction="left" bgcolor= "green" width = "100%" >
+    <span class="text" >ធ្វើដោយនិស្សិត : ណា សុខឃន់ | ជំនាញ MIS ឆ្នាំទី1 ឆមាសទី2 | វេនថ្ងៃ | ក្រុម SW34 ជំនាន់ទី23 | វិទ្យាស្ថានស៊ីតិក | បង្រៀនដោយលោកគ្រូ រី វីសាន | មុខវិជ្ជា : Web Developer I | គម្រោង​ ពាណិជ្ជកម្មអេឡិត្រូនិក |</span> 
+    </marquee>
+
+        <!-- Header-Container -->
+        <div class="Header-Container">
+            <!-- Left-Logo -->
+            <div class="logo">
+                <img src="img/Logo3.png">
+            </div>
+             <!-- this is menu -->
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">ទំព័រដើម</a></li>
+                </ul>
+                <ul>
+                    <li><a href="smartphone.html">ទូរស័ព្ទ</a></li>
+                </ul>
+                <ul>
+                    <li><a href="Headphone.html">កាស</a></li>
+                </ul>
+                <ul>
+                    <li><a href="Computer.html">កុំព្យូទ័រ</a></li>
+                </ul>
+                <ul>
+                    <li><a href="Controler.html">ដៃហ្គេម</a></li>
+                </ul>
+                <ul>
+                    <li><a href="contact.html">ទំនាក់ទំនង</a></li>
+                </ul>
+            </div>
+            <!-- rigth-Icon -->
+            <div class="icon">
+                
+                <div class="box-khmer-flag">
+                    <a href="contact.html"><img src="img/khmer-flag.png"></a>
+                </div>
+                
+                <div class="box-English-flag">
+                    <a href="Contact-Eng.html"><img src="img/English-flag.png" alt=""></a>
+                </div>
+                <div class="fa-bars">
+                    <i class="fa-solid fa-bars" id="Bar-menu"></i>
+                </div>
+            </div>
+        </div>
+
+    <br><br><br><br><br>
+    <div class="container">
+        <div class="box-profile">
+            <div class="box-my-pic">
+                <img src="img/my-pic.jpg" alt="">
+            </div>
+        </div>
+
+        <br><br><br>
+
+        <div class="box-infor">
+            <div class="box-text">
+               <div class="about-us">
+                    អំពីពួកយើង
+               </div> 
+               <div class="text">
+               យើងខ្ញុំជាក្រុមហ៊ុនផ្គត់ផ្គង់ឈានមុខគេនូវ ផលិតផលបច្ចេកវិទ្យាដែលមានគុណភាពខ្ពស់ (Premium) ដោយផ្តោតសំខាន់លើ ទូរស័ព្ទឆ្លាតវៃស៊េរីចុងក្រោយ ឧបករណ៍សំឡេងគុណភាពខ្ពស់ ដៃបញ្ជាហ្គេម និង កុំព្យូទ័រដ៏មានឥទ្ធិពល។ ជាមួយនឹង បទពិសោធន៍ជាច្រើនឆ្នាំក្នុងវិស័យនេះ យើងខ្ញុំនាំមកជូនលោកអ្នកនូវ បច្ចេកវិទ្យាទំនើបបំផុត និង សេវាកម្មអតិថិជនដ៏ល្អឥតខ្ចោះ។
+               </div>
+            </div>
+        </div>
+
+        <br><br><br>
+        <div class="social">
+            <h1>បណ្ដាញសង្គម</h1>
+            <a href="https://www.facebook.com/share/1S2GYutSSJ/?mibextid=wwXIfr"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.tiktok.com/@itstudent2025?_r=1&_t=ZS-918gahLqXY0"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://t.me/NaSokkhornn"><i class="fa-brands fa-telegram"></i></a>
+            <a href="https://www.instagram.com/gentle_man__ily?igsh=MWJsamJlc21xc29qOQ%3D%3D&utm_source=qr"><i class="fa-brands fa-square-instagram"></i></a>         
+        </div>
+
+        <br><br><br>
+        <!-- Box-Archive -->
+        <div class="archive">
+            <img src="img/award.png">
+            <h1>500+</h1> 
+            <p>ផលិតផល</p>
+
+        </div>
+        <div class="archive">
+            <img src="img/smile.png">
+            <h1>10K++</h1> 
+            <p>អតិថិជនរីករាយ</p>
+        </div>
+        <div class="archive">
+            <img src="img/star.png">
+            <h1>4.9+</h1> 
+            <p>ការវាយតម្លៃ</p>
+        </div>
+        <div class="archive">
+            <img src="img/earth.png">
+            <h1>50+</h1> 
+            <p>បណ្តាប្រទេស</p>
+        </div>
+
+        <!-- box-element -->
+
+        <div class="element">
+            <img src="img/phone.png">
+            <h1>ទូរស័ព្ទឆ្លាតវៃ</h1> 
+            <p>ម៉ូដែលថ្មីបំផុត ដែលមានមុខងារពិសេសៗលំដាប់កំពូល</p>
+        </div>
+        <div class="element">
+            <img src="img/earphone.png">
+            <h1>កាសស្តាប់ត្រចៀក</h1> 
+            <p>គុណភាពសំឡេងលំដាប់ខ្ពស់</p>
+        </div>
+        <div class="element">
+            <img src="img/Controller.png">
+            <h1>ដៃបញ្ជាហ្គេម</h1> 
+            <p>ឧបករណ៍លេងហ្គេមបែបអាជីព</p>
+        </div>
+        <div class="element">
+            <img src="img/computer.png">
+            <h1>កុំព្យូទ័រ</h1> 
+            <p>ប្រព័ន្ធដំណើរការខ្ពស់</p>    
+        </div>
+    </div>
+
+    <section class="footer-container-full">
+        <div class="footer-container">
+            <div class="footer-one">
+                <h3>អំពីពួកយើង</h3> <br>
+                ហាងរបស់យើងខ្ញុំ គឺជាហាងដែលបានផ្គត់ផ្គង់នូវផលិតផលបច្ចេកវិទ្យាច្រើនប្រភេទផ្សេងៗ ដូចជា ទូរស័ព្ទ, កុំព្យូទ័រ​, កាស, ដៃហ្គេម។
+                ហើយហាងរបស់យើងខ្ញុំ បានផ្តោតសំខាន់ទៅលើគុណភាព តម្លៃ និងការធានាត្រឹមត្រូវចេញពីក្រុមហ៊ុនផ្ទាល់ ដែលផ្ដល់នៅទំនុកចិត្ត និងបង្កើនការជឿ
+                ទុកចិត្តដល់អតិថិជនគ្រប់គ្នាៗ។
+            </div>
+            <div class="footer-two">
+                <h3>តំណភ្ជាប់រហ័ស</h3> <br>
+                ទំព័រដើម  <br>
+                ផលិតផល <br>
+                ការផ្តល់ជូនពិសេស <br>
+                លក្ខខណ្ឌ
+                គោលការណ៍ឯកជនភាព <br>
+            </div>
+            <div class="footer-three">
+                <h3>ព័ត៌មានទំនាក់ទំនង</h3> <br>
+                <i class="fa-solid fa-location-dot"></i>86A, Russian Blvd (St. 110)  Phnom Penh, Cambodia<br>            
+                <i class="fa-solid fa-phone"></i>088 694 8293<br>
+                <i class="fa-solid fa-envelope"></i>sokkhorn-store@email.com<br>
+            </div>
+            <div class="footer-four">
+                <h3>បណ្ដាញសង្គម</h3> <br>
+                <a href="https://www.facebook.com/share/17CRmxa28r/?mibextid=wwXIfr"><i class="fa-brands fa-facebook"></i>Sokkhorn</a> <br> 
+                <a href="https://www.tiktok.com/@itstudent2025?is_from_webapp=1&sender_device=pc"><i class="fa-brands fa-tiktok"></i>  IT-Student </a>    <br> 
+                <a href="https://t.me/NASOKKHORNN"><i class="fa-brands fa-telegram"></i>Na Sokkhorn </a>   <br> 
+                <a href="http://www.sokkhorn"><i class="fa-brands fa-instagram"></i>Gentle-Man</a><br>   
+            </div>
+        </div>
+    </section>
+
+  
+</body>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#Bar-menu').click(function(){
+            $('.menu').slideToggle();
+        })
+    });
+    AOS.init()
+</script>
+</html>
